@@ -20,7 +20,7 @@ class neo4j {
   }
   
   exec { 'neo4j-install':
-    command => "yes '' | /opt/#{release}/bin/neo4j install",
+    command => "yes '' | /opt/${release}/bin/neo4j install",
     unless => "service neo4j-service status",
     require => Exec['neo4j-extract'],
     notify => Service['neo4j-service'],
