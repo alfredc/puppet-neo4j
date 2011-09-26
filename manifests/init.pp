@@ -8,7 +8,7 @@ class neo4j {
 
   exec { 'neo4j-download':
     command => "wget -O /var/tmp/${release}-unix.tar.gz http://dist.neo4j.org/${release}-unix.tar.gz",
-    creates => "/var/tmp/${release}.tar.gz",
+    creates => "/var/tmp/${release}-unix.tar.gz",
     path => ["/bin", "/usr/bin"],
   }
   
