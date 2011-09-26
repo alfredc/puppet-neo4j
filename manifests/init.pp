@@ -14,7 +14,7 @@ class neo4j {
   
   exec { 'neo4j-extract':
     command => "tar -xzf /var/tmp/${release}-unix.tar.gz -C /opt",
-    creates => "/opt/#{release}",
+    creates => "/opt/${release}",
     path => ["/bin", "/usr/bin"],
     require => Exec['neo4j-download'],
   }
